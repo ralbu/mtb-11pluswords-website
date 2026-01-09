@@ -1,0 +1,754 @@
+﻿/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ===================================
+   Theme 1: Coral & Blue
+   Based on provided color palette
+   =================================== */
+
+/* ===================================
+   Global Styles & Reset
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #420002;
+    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 30px 0;
+}
+
+h1, h2, h3 {
+    color: #420002;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #BA5B5B;
+}
+
+/* ===================================
+   Button Styles
+   =================================== */
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #3493F1 0%, #13A042 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 147, 241, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 147, 241, 0.6);
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+
+.hero {
+    background: url('imgs/words-yellow-background-50.png') repeat;
+    background-size: 160px auto;
+    color: white;
+    padding: 80px 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero h1 {
+    color: #C8564F;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    color: #C8564F;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.hero .cta-button {
+    background: white;
+    color: #F3666B;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .cta-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   Phone Mockup (CSS-only)
+   =================================== */
+
+.hero-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 280px;
+}
+
+.phone-mockup {
+    width: 280px;
+    height: 560px;
+    background: #420002;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 6px;
+    background: #BA5B5B;
+    border-radius: 3px;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.mockup-content {
+    padding: 30px 20px 20px;
+    height: 100%;
+}
+
+.mockup-header {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.mockup-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mockup-card {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+    border-radius: 12px;
+}
+
+.hero-mockup-img {
+    width: 280px;
+    height: 560px;
+    /*object-fit: cover;*/
+    border-radius: 40px;
+}
+
+/* ===================================
+   Content Cards
+   =================================== */
+
+.content-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.content-card h2 {
+    color: #F3666B;
+    margin-bottom: 1.5rem;
+}
+
+.content-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #BA5B5B;
+}
+
+/* ===================================
+   Section Titles
+   =================================== */
+
+.section-title {
+    text-align: center;
+    color: #420002;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* ===================================
+   Features Section
+   =================================== */
+
+.features-section {
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+    color: #F3666B;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #BA5B5B;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===================================
+   How It Works Section
+   =================================== */
+
+.how-it-works-section {
+    background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
+    color: white;
+}
+
+.how-it-works-section .section-title {
+    color: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #F3666B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* ===================================
+   Benefits Section
+   =================================== */
+
+.benefits-section {
+    background: white;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #F3666B;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(243, 102, 107, 0.2);
+}
+
+.benefit-card h3 {
+    color: #F3666B;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #BA5B5B;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Free Section
+   =================================== */
+
+.free-section {
+    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
+    color: white;
+    text-align: center;
+}
+
+.highlight-card h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight-card .cta-button {
+    background: white;
+    color: #F3666B;
+    margin-top: 1rem;
+}
+
+/* ===================================
+   FAQ Section
+   =================================== */
+
+.faq-section {
+    background: white;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.faq-card {
+    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faq-card h3 {
+    color: #420002;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.faq-card p {
+    color: #BA5B5B;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Final CTA Section
+   =================================== */
+
+.final-cta-section {
+    background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
+    padding: 80px 0;
+}
+
+.cta-card {
+    text-align: center;
+    color: white;
+}
+
+.cta-card h2 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-card p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-card .cta-button {
+    background: white;
+    color: #F3666B;
+    font-size: 1.2rem;
+    padding: 16px 40px;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+
+.footer {
+    background: #420002;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+            radial-gradient(circle at 20% 50%, rgba(243, 102, 107, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(246, 140, 144, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 20%, rgba(243, 102, 107, 0.2) 0%, transparent 40%),
+            radial-gradient(circle at 60% 70%, rgba(246, 140, 144, 0.2) 0%, transparent 40%),
+            linear-gradient(135deg,
+            transparent 0%,
+            transparent 25%,
+            rgba(243, 102, 107, 0.1) 25%,
+            rgba(243, 102, 107, 0.1) 50%,
+            transparent 50%,
+            transparent 75%,
+            rgba(246, 140, 144, 0.1) 75%,
+            rgba(246, 140, 144, 0.1) 100%
+            );
+    background-size: 100% 100%, 100% 100%, 100% 100%, 80px 80px;
+    z-index: 1;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* ===================================
+   Mobile Responsive Styles
+   =================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .phone-mockup {
+        width: 240px;
+        height: 480px;
+    }
+    
+    .content-card {
+        padding: 30px 25px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .features-grid,
+    .benefits-grid,
+    .steps-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card,
+    .benefit-card,
+    .step-card,
+    .faq-card {
+        padding: 25px;
+    }
+    
+    .cta-card h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-card p {
+        font-size: 1.1rem;
+    }
+    
+    .highlight-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-placeholder {
+        position: relative;
+        margin: 0 auto 16px auto;
+        display: flex;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        z-index: 20;
+    }
+    .hero {
+        padding-top: 20px;
+    }
+    .hero-content {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        display: block;
+    }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    .hero-text {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+    }
+    
+    .content-card {
+        padding: 25px 20px;
+    }
+}
+
+/* ===================================
+   Logo Styles
+   =================================== */
+/*.hero-mockup-img {*/
+/*    background: transparent;*/
+/*}*/
+.logo-placeholder {
+    position: absolute;
+    top: 32px;
+    left: 120px; /* Moved from 100px to 120px to shift the logo image further right */
+    z-index: 10;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    transition: left 0.3s cubic-bezier(.4,2,.6,1), top 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+@media (max-width: 1200px) {
+    .logo-placeholder {
+        left: 40px;
+    }
+}
+@media (max-width: 900px) {
+    .logo-placeholder {
+        left: 16px;
+        top: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .logo-placeholder {
+        left: 8px;
+        top: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .logo-placeholder {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 auto 16px auto;
+        display: flex;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        z-index: 20;
+    }
+    .hero {
+        padding-top: 20px;
+    }
+    .hero-content {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-placeholder {
+        width: 48px;
+        height: 48px;
+    }
+    .logo-img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.logo-img {
+    border-radius: 12px; /* Slightly rounded corners */
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Fallback: if logo image does not use .logo-img, target img inside .logo-placeholder */
+
+.logo-placeholder img {
+    border-radius: 12px;
+    background: none !important;
+    box-shadow: none !important;
+}
