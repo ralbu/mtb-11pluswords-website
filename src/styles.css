@@ -30,7 +30,7 @@ body {
 }
 
 section {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 h1, h2, h3 {
@@ -74,7 +74,23 @@ p {
     font-size: 1.1rem;
     /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
     /*box-shadow: 0 4px 15px rgba(52, 147, 241, 0.4);*/
+    background: #2F9434;
+    color: #fff;
 }
+
+/*.hero .cta-button {*/
+/*    background: #2F9434;*/
+/*    color: #fff;*/
+/*    !*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);*!*/
+/*}*/
+
+.cta-button:hover {
+    /*box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);*/
+    background: #2E7D32;
+}
+
+
+
 
 
 /* ===================================
@@ -119,16 +135,16 @@ p {
     font-weight: 500;
 }
 
-.hero .cta-button {
-    background: #2F9434;
-    color: #fff;
-    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);*/
-}
+/*.hero .cta-button {*/
+/*    background: #2F9434;*/
+/*    color: #fff;*/
+/*    !*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);*!*/
+/*}*/
 
-.hero .cta-button:hover {
-    /*box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);*/
-    background: #2E7D32;
-}
+/*.hero .cta-button:hover {*/
+/*    !*box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);*!*/
+/*    background: #2E7D32;*/
+/*}*/
 
 /* ===================================
    Phone Mockup (CSS-only)
@@ -210,14 +226,26 @@ p {
    =================================== */
 
 .content-card {
-    background: white;
-    padding: 50px;
-    border-radius: 20px;
+    /*background: white !important;*/
+    /*padding: 50px;*/
+    /*border-radius: 20px;*/
+    /*border: none !important;*/
+    /*box-shadow: none !important;*/
+    /*outline: none !important;*/
+    /*background-image: none !important;*/
+}
+
+.content-card * {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
 }
 
 .content-card h2 {
     color: #F3666B;
     margin-bottom: 1.5rem;
+    /* Border property removed completely for section headers */
 }
 
 .content-card p {
@@ -232,7 +260,7 @@ p {
 
 .section-title {
     text-align: center;
-    color: #420002;
+    color: #F3666B;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
@@ -336,7 +364,6 @@ p {
     background: white;
     padding: 40px;
     border-radius: 16px;
-    border: 2px solid #F3666B;
 }
 
 .benefit-card h3 {
@@ -354,11 +381,12 @@ p {
    =================================== */
 
 .free-section {
-    background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
+    /*background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);*/
+    background:linear-gradient(135deg, #F3666B 0%, #F68C90 100%)
 }
 
 .highlight-card {
-    background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
+    /*background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);*/
     color: white;
     text-align: center;
 }
