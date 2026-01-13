@@ -76,10 +76,6 @@ p {
     /*box-shadow: 0 4px 15px rgba(52, 147, 241, 0.4);*/
 }
 
-.cta-button:hover {
-    /*transform: translateY(-2px);*/
-    /*box-shadow: 0 6px 20px rgba(52, 147, 241, 0.6);*/
-}
 
 /* ===================================
    Hero Section
@@ -152,7 +148,7 @@ p {
     background: #420002;
     border-radius: 40px;
     padding: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    /*box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);*/
     position: relative;
 }
 
@@ -217,13 +213,6 @@ p {
     background: white;
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.content-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .content-card h2 {
@@ -266,13 +255,6 @@ p {
     background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .feature-card h3 {
@@ -310,13 +292,6 @@ p {
     backdrop-filter: blur(10px);
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
 }
 
 .step-number {
@@ -361,14 +336,7 @@ p {
     background: white;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border: 2px solid #F3666B;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(243, 102, 107, 0.2);
 }
 
 .benefit-card h3 {
@@ -433,14 +401,9 @@ p {
     background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.faq-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
+/* Removed box-shadow property from all sections */
 
 .faq-card h3 {
     color: #420002;
