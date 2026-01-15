@@ -419,10 +419,28 @@ p {
     background: white;
 }
 
+.faq-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.faq-image {
+    flex-shrink: 0;
+}
+
+.faq-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
+    flex: 1;
 }
 
 .faq-card {
@@ -581,6 +599,15 @@ p {
         gap: 20px;
     }
     
+    .faq-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-image img {
+        max-width: 200px;
+    }
+
     .feature-card,
     .benefit-card,
     .step-card,
