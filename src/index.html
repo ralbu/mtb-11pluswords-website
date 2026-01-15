@@ -162,26 +162,26 @@
                     <img src="imgs/meerkat_025.png" alt="App Learn Screen" />
                 </div>
                 <div class="faq-grid">
-                    <div class="faq-card">
-                        <h3>Is the app really free?</h3>
-                        <p>Yes. All essential features are free, with no ads and no interruptions.</p>
+                    <div class="faq-card" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is the app really free? <span class="faq-icon">+</span></h3>
+                        <p class="faq-answer">Yes. All essential features are free, with no ads and no interruptions.</p>
                     </div>
-                    <div class="faq-card">
-                        <h3>Is it safe for children?</h3>
-                        <p>Yes. No ads, no social features, no external links.</p>
+                    <div class="faq-card" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is it safe for children? <span class="faq-icon">+</span></h3>
+                        <p class="faq-answer">Yes. No ads, no social features, no external links.</p>
                     </div>
-                    <div class="faq-card">
-                        <h3>How often should my child use it?</h3>
-                        <p>5–10 minute sessions, 3–4 times per week, work best.</p>
+                    <div class="faq-card" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">How often should my child use it? <span class="faq-icon">+</span></h3>
+                        <p class="faq-answer">5–10 minute sessions, 3–4 times per week, work best.</p>
                     </div>
-                    <div class="faq-card">
-                        <h3>Is the content aligned with the 11+ exam?</h3>
-                        <p>Yes. Vocabulary is selected to match common 11+ English requirements.</p>
+                    <div class="faq-card" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is the content aligned with the 11+ exam? <span class="faq-icon">+</span></h3>
+                        <p class="faq-answer">Yes. Vocabulary is selected to match common 11+ English requirements.</p>
                     </div>
-                    <div class="faq-card">
-                        <h3>Will there be a paid version?</h3>
-                        <p>Yes, but the core free experience will remain available.</p>
-                    </div>
+<!--                    <div class="faq-card" onclick="toggleFaq(this)">-->
+<!--                        <h3 class="faq-question">Will there be a paid version? <span class="faq-icon">+</span></h3>-->
+<!--                        <p class="faq-answer">Yes, but the core free experience will remain available.</p>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -205,5 +205,25 @@
         </div>
     </footer>
     
+    <script>
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-card').forEach(card => {
+                card.classList.remove('active');
+                const icon = card.querySelector('.faq-icon');
+                if (icon) icon.textContent = '+';
+            });
+
+            // If this item wasn't active, open it
+            if (!isActive) {
+                element.classList.add('active');
+                const icon = element.querySelector('.faq-icon');
+                if (icon) icon.textContent = '−';
+            }
+        }
+    </script>
+
 </body>
 </html>
