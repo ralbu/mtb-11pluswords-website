@@ -460,15 +460,15 @@ p {
 }
 
 .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     flex: 1;
 }
 
 .faq-card {
     background: linear-gradient(135deg, #FFFAFA 0%, #F4F4F4 100%);
-    padding: 30px;
+    padding: 25px 30px;
     border-radius: 16px;
 }
 
