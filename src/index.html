@@ -150,20 +150,20 @@
             <h2 class="section-title">FAQ</h2>
             <div class="faq-content">
                 <div class="faq-grid">
-                    <div class="faq-card" onclick="toggleFaq(this)">
-                        <h3 class="faq-question">Is the app really free? <span class="faq-icon">+</span></h3>
+                    <div class="faq-card">
+                        <h3 class="faq-question">Is the app really free?</h3>
                         <p class="faq-answer">Yes, everything in the app is completely free — no hidden features, no ads, no catch.</p>
                     </div>
-                    <div class="faq-card" onclick="toggleFaq(this)">
-                        <h3 class="faq-question">Is it safe for children? <span class="faq-icon">+</span></h3>
+                    <div class="faq-card">
+                        <h3 class="faq-question">Is it safe for children?</h3>
                         <p class="faq-answer">Yes. No ads, no social features, no external links.</p>
                     </div>
-                    <div class="faq-card" onclick="toggleFaq(this)">
-                        <h3 class="faq-question">How often should my child use it? <span class="faq-icon">+</span></h3>
+                    <div class="faq-card">
+                        <h3 class="faq-question">How often should my child use it?</h3>
                         <p class="faq-answer">5–10 minute sessions, 3–4 times per week, work best.</p>
                     </div>
-                    <div class="faq-card" onclick="toggleFaq(this)">
-                        <h3 class="faq-question">Is the content aligned with the 11+ exam? <span class="faq-icon">+</span></h3>
+                    <div class="faq-card">
+                        <h3 class="faq-question">Is the content aligned with the 11+ exam?</h3>
                         <p class="faq-answer">Yes. Vocabulary is selected to match common 11+ English requirements.</p>
                     </div>
                 </div>
@@ -189,26 +189,6 @@
         </div>
     </footer>
     
-    <script>
-        function toggleFaq(element) {
-            const isActive = element.classList.contains('active');
-
-            // Close all FAQ items
-            document.querySelectorAll('.faq-card').forEach(card => {
-                card.classList.remove('active');
-                const icon = card.querySelector('.faq-icon');
-                if (icon) icon.textContent = '+';
-            });
-
-            // If this item wasn't active, open it
-            if (!isActive) {
-                element.classList.add('active');
-                const icon = element.querySelector('.faq-icon');
-                if (icon) icon.textContent = '−';
-            }
-        }
-    </script>
-
     <!-- FAQ Structured Data -->
     <script type="application/ld+json">
     {
