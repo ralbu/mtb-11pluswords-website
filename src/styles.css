@@ -714,8 +714,8 @@ p {
 .site-header .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 32px;
     padding-top: 12px;
     padding-bottom: 12px;
 }
