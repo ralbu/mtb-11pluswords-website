@@ -705,8 +705,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: url('imgs/words-yellow-background-50.png') repeat;
-    background-size: 160px auto;
+    background: #FFFAFA;
     border-bottom: 1px solid rgba(200, 86, 79, 0.15);
     box-shadow: 0 2px 8px rgba(66, 0, 2, 0.06);
 }
