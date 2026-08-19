@@ -14,9 +14,9 @@ Static marketing landing page for "11+ Words", a free mobile app (Google Play) t
 ## Structure
 
 - `src/index.html` — the live home page. Single-page layout with sections: hero, "Why Vocabulary Matters", "Solution", "Features", "Free to Use", FAQ (with inline `toggleFaq` JS for accordion behavior), final CTA, footer.
-- `src/guides.html` — guides index; links to the pages in `src/guides/`.
-- `src/guides/500-most-important-words.html` — the "500 Most Important Words" vocabulary guide (three word tables, 100/150/250 rows). Generated from `src/articles/500_most_important_words.pdf`; sits one level down, so all assets are referenced via `../`.
-- `src/articles/` — source PDFs the guide pages are built from.
+- `src/guides.html` — guides index; links to the guide pages in `src/articles/`.
+- `src/articles/500-most-important-words.html` — the "500 Most Important Words" vocabulary guide (three word tables, 100/150/250 rows). Generated from `src/articles/500_most_important_words.pdf`; sits one level down, so all assets are referenced via `../`.
+- `src/articles/` — the guide pages plus the source PDFs they are built from.
 - `src/styles.css` — styles for every page on the site, not just `index.html`.
 - `src/index-example.html` / `src/styles-example.css` — example/reference variant, not the live page.
 - `src/imgs/` — images (app icon, phone mockups at multiple resolutions, decorative graphics).
