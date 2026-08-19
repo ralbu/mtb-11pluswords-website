@@ -854,6 +854,33 @@ p {
     margin-bottom: 2rem;
 }
 
+/* Pull-aside inside article copy — a nudge that isn't a full CTA panel */
+
+.article-aside {
+    margin: 1.75rem 0;
+    padding: 18px 24px;
+    border-radius: 16px;
+    border-left: 4px solid #F3666B;
+    background: #FFF0F0;
+    color: #420002 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600;
+}
+
+/* Inline links in article copy */
+
+.inline-link {
+    color: #C8564F;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.inline-link:hover,
+.inline-link:focus {
+    color: #F3666B;
+}
+
 .article-header h1 {
     color: #C8564F;
     font-size: 2.5rem;
