@@ -33,6 +33,7 @@ Conventions to preserve:
 - **One font family:** Inter, loaded via `@import` and set once on `body`. Weights 400 / 600 / 700 only.
 - **Green means download.** `#2F9434` (hover `#2E7D32`) is used for the Play Store button and nothing else; every other interactive pill is coral.
 - **Coral has three steps:** `#C8564F` page titles (`.hero h1`, `.article-header h1`), `#F3666B` section headings and CTA panels, `#F68C90` only as the far end of `linear-gradient(135deg, #F3666B, #F68C90)`.
+- **Amber means "extra resource."** `#C98A18` (hover/accent `#A8710F`) on a `#FFF6E5` panel with a `rgba(201, 138, 24, 0.28)` border — the third and last reserved colour, for downloadable extras that sit beside the main content (the printable PDF callout, `.pdf-panel--amber`). Reuse it for other downloads/resources rather than inventing a new accent; do not use it for navigation or the app CTA. Button text is white, `strong` inside the panel is `#A8710F`, body copy stays `#420002`.
 - **Text:** `#420002` headings/emphasis, `#BA5B5B` body copy.
 - **Surfaces:** page gradient `#FFFAFA → #F4F4F4`, `#FFFFFF` cards/tables, `#FFF0F0` tint for table headers and pills; borders are `rgba(200, 86, 79, …)`.
 - **Radii:** pills 30px, cards 16px, panels 20px, table containers 12px.
@@ -44,4 +45,5 @@ Conventions to preserve:
 - The Google Play download link (`https://play.google.com/store/apps/details?id=com.mindthatbit.x11pluswords`) appears in multiple CTAs; keep these consistent if updated.
 - Images are served at multiple resolutions via `srcset` (e.g. `phone_561.png` 1x / `phone_1000.png` 2x) — provide both sizes when adding similar responsive images.
 - `.content-card *` in `styles.css` sets `border`/`box-shadow`/`background-image` to `none !important`, which silently strips borders from anything nested inside a content card — don't put tables or bordered components there.
+- The downloadable-resource callout is `.pdf-panel` / `.pdf-panel-text` / `.pdf-link` in `styles.css` (amber variant `.pdf-panel--amber`). It's a flex row that centres and stacks below 600px — reuse the markup as-is for any new download panel; only the colour modifier should change.
 - To extract text from a PDF in `src/articles/`, use `pdftotext -table`. Plain `-layout` mis-shifts every table row whose cell wraps to a second line.

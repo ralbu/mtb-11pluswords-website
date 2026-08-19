@@ -909,6 +909,38 @@ p {
     color: #fff;
 }
 
+/* PREVIEW ONLY — amber alternative; remove with the extra panel once a colour is settled */
+
+.pdf-preview-label {
+    margin: 1.75rem 0 0.4rem;
+    font-size: 0.8rem !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #BA5B5B !important;
+}
+
+.pdf-panel--amber {
+    background: #FFF6E5;
+    border-color: rgba(201, 138, 24, 0.28);
+}
+
+.pdf-panel--amber .pdf-panel-text strong {
+    color: #A8710F;
+}
+
+.pdf-panel--amber .pdf-link {
+    background: #C98A18;
+}
+
+.pdf-panel--amber .pdf-link:hover,
+.pdf-panel--amber .pdf-link:focus {
+    background: #A8710F;
+}
+
+
+/* END PREVIEW */
+
 @media (max-width: 600px) {
     .pdf-panel {
         justify-content: center;
