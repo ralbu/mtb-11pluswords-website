@@ -866,6 +866,56 @@ p {
     color: #F3666B !important;
 }
 
+/* Printable PDF callout at the top of a guide */
+
+.pdf-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background: #FFF0F0;
+    border: 1px solid rgba(200, 86, 79, 0.25);
+}
+
+.pdf-panel-text {
+    margin: 0;
+    font-size: 1.05rem !important;
+    color: #420002 !important;
+}
+
+.pdf-panel-text strong {
+    color: #C8564F;
+}
+
+.pdf-link {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #F3666B;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.pdf-link:hover,
+.pdf-link:focus {
+    background: #C8564F;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .pdf-panel {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 /* Guide pages opt out of the footer's yellow-words tile */
 
 .footer-plain {
