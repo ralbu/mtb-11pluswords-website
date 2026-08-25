@@ -842,6 +842,16 @@ p {
     margin-top: 2rem;
 }
 
+/* EXPERIMENT: black body copy in guide articles instead of the usual #BA5B5B.
+   Scoped to direct children so the coral CTA panel, the .article-aside, the
+   .article-note footnote and any .feature-card copy keep their own colours.
+   Revert by deleting this block. */
+
+.article-body > p:not(.article-note),
+.article-body > ul > li {
+    color: #1A1A1A;
+}
+
 .article-body p {
     font-size: 1.05rem;
     line-height: 1.8;
