@@ -834,6 +834,14 @@ p {
     margin-top: 0;
 }
 
+/* Sub-headings in the article copy itself (not the ones inside .feature-card,
+   which keep margin-top: 0) — same coral as .article-body h2, one step smaller. */
+
+.article-body > h3 {
+    color: #F3666B;
+    margin-top: 2rem;
+}
+
 .article-body p {
     font-size: 1.05rem;
     line-height: 1.8;
