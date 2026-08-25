@@ -854,7 +854,7 @@ p {
     margin-bottom: 2rem;
 }
 
-/* Pull-aside inside article copy — a nudge that isn't a full CTA panel */
+/* Pull-aside inside article copy - a nudge that isn't a full CTA panel */
 
 .article-aside {
     margin: 1.75rem 0;
@@ -936,7 +936,7 @@ p {
     color: #fff;
 }
 
-/* PREVIEW ONLY — amber alternative; remove with the extra panel once a colour is settled */
+/* PREVIEW ONLY - amber alternative; remove with the extra panel once a colour is settled */
 
 .pdf-preview-label {
     margin: 1.75rem 0 0.4rem;
