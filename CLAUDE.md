@@ -39,6 +39,46 @@ Conventions to preserve:
 - **Radii:** pills 30px, cards 16px, panels 20px, table containers 12px.
 - **Breakpoints:** 768px (grids collapse to one column, `h1` → 2.2rem), 600px (header nav, table type), 480px (`h1` → 1.8rem, tighter padding). A rule added for one breakpoint usually needs its siblings — see `.hero h1` and `.article-header h1`, which step together.
 
+## Adding a New Article
+
+New articles arrive as a GitHub issue created from the `.github/ISSUE_TEMPLATE/article.md` template, with approved Markdown content pasted into the issue body. When implementing one:
+
+- Place the new file in `src/articles/`, following the naming and structure of `500-most-important-words.html` (asset paths via `../`, same header/footer markup, same `.article-header` conventions).
+- Every page's `<head>` must include the following boilerplate, adapted per-article (do not omit any of it):
+
+```html
+<title>{Article Title} | 11+ Words</title>
+<meta name="description" content="{~150-160 char meta description built around the article's target keyword}">
+<link rel="canonical" href="https://elevenplusworks.co.uk/articles/{slug}">
+
+<meta property="og:title" content="{Article Title}">
+<meta property="og:description" content="{same or shortened meta description}">
+<meta property="og:url" content="https://elevenplusworks.co.uk/articles/{slug}">
+<meta property="og:type" content="article">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P05H77QFG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2P05H77QFG');
+</script>
+```
+
+- Use a clean H1 → H2 → H3 hierarchy matching the source Markdown; don't skip levels.
+- All images need descriptive `alt` text.
+- If the article has a natural Q&A section, add FAQ schema (`application/ld+json`, `@type: FAQPage`) — check with the person if unsure whether a given article warrants it.
+- Cross-link to related articles in `src/articles/`, and add the new article as a `.feature-card` in the `.features-grid` on `src/guides.html` (the guides index). `src/index.html` has no guides listing — only a nav link to `guides.html` — so nothing there needs updating.
+- Add the new article URL to `sitemap.xml` (create this file if it doesn't yet exist at the repo root).
+- Work through the issue's checklist top to bottom and leave items unchecked (don't check them off) if something couldn't be completed — flag it in the PR description instead.
+
+## Git Workflow
+
+- **Never run git write operations.** Do not create branches, commit, push, tag, merge, rebase, stash, or open/merge PRs — not even when a task seems to call for it. Leave changes in the working tree and tell the person what you changed; they handle all git themselves.
+- Read-only git and `gh` usage is fine: reading issues (`gh issue view/list`), `git status`, `git diff`, `git log`, `git show`.
+- If you think a branch or PR is needed, say so and stop — do not create one.
+
 ## Notes
 
 - Several sections ("How It Works", "Benefits") are commented out in `index.html` — check before assuming a section is missing entirely.
@@ -47,3 +87,4 @@ Conventions to preserve:
 - `.content-card *` in `styles.css` sets `border`/`box-shadow`/`background-image` to `none !important`, which silently strips borders from anything nested inside a content card — don't put tables or bordered components there.
 - The downloadable-resource callout is `.pdf-panel` / `.pdf-panel-text` / `.pdf-link` in `styles.css` (amber variant `.pdf-panel--amber`). It's a flex row that centres and stacks below 600px — reuse the markup as-is for any new download panel; only the colour modifier should change.
 - To extract text from a PDF in `src/articles/`, use `pdftotext -table`. Plain `-layout` mis-shifts every table row whose cell wraps to a second line.
+- Google Analytics (gtag.js) is live site-wide; if you ever add/adjust cookie consent handling, note that GA requires consent under UK PECR — check with the person before changing this.

@@ -848,7 +848,8 @@ p {
    Revert by deleting this block. */
 
 .article-body > p:not(.article-note),
-.article-body > ul > li {
+.article-body > ul > li,
+.article-body > ol > li {
     color: #1A1A1A;
 }
 
@@ -857,7 +858,8 @@ p {
     line-height: 1.8;
 }
 
-.article-body ul {
+.article-body ul,
+.article-body ol {
     margin: 0 0 1rem 1.25rem;
     padding: 0;
 }
