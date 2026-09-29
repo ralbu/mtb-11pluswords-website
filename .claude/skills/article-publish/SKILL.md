@@ -11,7 +11,7 @@ Implements an article from an approved GitHub issue into the site, following the
 
 - [ ] Title tag + meta description written
 - [ ] OG tags added (title, description, url)
-- [ ] Google Analytics tag present in `<head>` (via shared template, not pasted manually)
+- [ ] Google Analytics tag present in `<head>` (inline gtag block from CLAUDE.md, tag `G-2P05H77QFG`)
 - [ ] Canonical URL set
 - [ ] Placed in correct folder (`/articles/`)
 - [ ] Cross-links added to/from related articles
@@ -27,7 +27,7 @@ Write a unique `<title>` and `<meta name="description">` per article, matching p
 Add `og:title`, `og:description`, and `og:url` in the `<head>`. `og:title`/`og:description` can mirror the title tag and meta description unless a shorter or more shareable phrasing is clearly better for social previews. `og:url` is the canonical URL for the article (see below).
 
 **Google Analytics tag**
-Never paste the GA script inline in a new article page. Pull it from the shared template/include used site-wide (tag `G-2P05H77QFG`) so all pages stay on one source of truth.
+The site is plain static HTML with no include/template mechanism, so every page carries its own copy of the Google Analytics (gtag.js) snippet. Paste the exact gtag block from `CLAUDE.md` (tag `G-2P05H77QFG`) into `<head>`, directly after the viewport meta, as the existing articles do. If the tag ID ever changes, update it on every page.
 
 **Canonical URL**
 Set `<link rel="canonical" href="...">` to the article's final published URL under `elevenplusworks.co.uk/articles/`.

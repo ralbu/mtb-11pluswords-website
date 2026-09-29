@@ -43,7 +43,8 @@ Conventions to preserve:
 
 New articles arrive as a GitHub issue created from the `.github/ISSUE_TEMPLATE/article.md` template, with approved Markdown content pasted into the issue body. When implementing one:
 
-- Place the new file in `src/articles/`, following the naming and structure of `500-most-important-words.html` (asset paths via `../`, same header/footer markup, same `.article-header` conventions).
+- Place the new file in `src/articles/`, following the naming and structure of `vocabulary-by-age-11-plus.html` for prose articles, or `500-most-important-words.html` for word-list/table articles (asset paths via `../`, same header/footer markup, same `.article-header` conventions).
+- Reusable article pieces: `.article-standfirst` for the intro under the H1, `p.article-aside` with `a.inline-link` for mid-article cross-links, the `.cta-card.article-cta` app box with the Play Store `.cta-button` and `.platform-notice`, "…? Read: …" link lines after the CTA, and `Article` JSON-LD before `</body>`.
 - Every page's `<head>` must include the following boilerplate, adapted per-article (do not omit any of it):
 
 ```html
