@@ -1105,6 +1105,7 @@ p {
 
 .article-cta {
     margin-top: 3rem;
+    margin-bottom: 2.5rem;
     padding: 40px;
     border-radius: 20px;
     background: linear-gradient(135deg, #F3666B 0%, #F68C90 100%);
