@@ -65,3 +65,5 @@ let links = getPageLinks "guides.html"
 for u in links do
     let status = try int (client.GetAsync(u).Result.StatusCode) with _ -> 0
     printfn $"{status} {u}"
+    let shouldOpenThePage = status = 200 && u.Host = "localhost"
+    printfn $"should open {shouldOpenThePage}"
