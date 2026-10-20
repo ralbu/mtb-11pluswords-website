@@ -69,7 +69,7 @@ New articles arrive as a GitHub issue created from the `.github/ISSUE_TEMPLATE/a
 
 - Use a clean H1 → H2 → H3 hierarchy matching the source Markdown; don't skip levels.
 - All images need descriptive `alt` text.
-- If the article has a natural Q&A section, add FAQ schema (`application/ld+json`, `@type: FAQPage`) — check with the person if unsure whether a given article warrants it.
+- Don't add FAQ schema (`FAQPage`) to articles, even when they have question-style headings or a Q&A section. The `Article` JSON-LD is the only structured data an article needs.
 - Cross-link to related articles in `src/articles/`, and add the new article as a `.feature-card` in the `.features-grid` on `src/guides.html` (the guides index). `src/index.html` has no guides listing — only a nav link to `guides.html` — so nothing there needs updating.
 - Work through the issue's checklist top to bottom and leave items unchecked (don't check them off) if something couldn't be completed — flag it in the PR description instead.
 
