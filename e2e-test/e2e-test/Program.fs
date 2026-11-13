@@ -62,8 +62,12 @@ let getPageLinks(page:string) =
 
 let links = getPageLinks "guides.html"
 
-for u in links do
-    let status = try int (client.GetAsync(u).Result.StatusCode) with _ -> 0
-    printfn $"{status} {u}"
-    let shouldOpenThePage = status = 200 && u.Host = "localhost"
+for url in links do
+    let status = try int (client.GetAsync(url).Result.StatusCode) with _ -> 0
+    printfn $"{status} {url}"
+    let shouldOpenThePage = status = 200 && url.Host = "localhost"
     printfn $"should open {shouldOpenThePage}"
+    if shouldOpenThePage then
+        let innerLink = getPageLinks url.AbsolutePath
+        printfn $"innerLinks: {innerLink}"
+       // need to add the list of links into a collection then check if it exists when calling so not calling the same link multiple times
